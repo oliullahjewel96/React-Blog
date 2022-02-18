@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Create from "./components/Create";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import BlogDetails from "./components/BlogDetails";
 
 export default function App() {
   return (
@@ -13,13 +14,16 @@ export default function App() {
           <Switch>
             <Route exact path="/">
               <Home />
-            </Route>
+            </Route>{" "}
             <Route path="/create">
               <Create />
-            </Route>
-          </Switch>
-        </div>
-      </div>
+            </Route>{" "}
+            <Route path="/blogs/:id">
+              <BlogDetails />
+            </Route>{" "}
+          </Switch>{" "}
+        </div>{" "}
+      </div>{" "}
     </Router>
   );
 }
